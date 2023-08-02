@@ -1,0 +1,55 @@
+/* these are styles to make it pretty */
+/* sidenav.css has all the layout, state and functionality */
+
+nav {
+	color: var(--text);
+}
+
+@media (max-width: 640px) {
+	nav {
+		background-color: var(--surface2);
+		border-inline-end: 1px var(--surface1);
+		box-shadow: 5px 0 40px hsla(0 0% 0% / 0.45);
+		font-size: 1.5rem;
+	}
+}
+
+.hamburger {
+	border: 2px solid transparent;
+	transition:
+		border-color 0.25s ease,
+		background-color 0.25s ease;
+}
+
+.hamburger:hover {
+	color: hsl(var(--brandHSL));
+	border-color: hsl(var(--brandHSL) / 50%);
+}
+
+.hamburger:focus {
+	border-color: hsl(var(--brandHSL) / 12%);
+	background: hsl(var(--brandHSL) / 10%);
+}
+
+.hamburger:active {
+	background: hsl(var(--brandHSL) / 20%);
+}
+.hamburger > svg > line {
+	stroke: currentColor;
+	stroke-width: 7px;
+	transition: stroke 0.25s ease;
+}
+
+aside > button {
+	outline-offset: -1px;
+	outline: 1px solid transparent;
+}
+aside > button:focus {
+	outline-color: hsl(var(--brandHSL));
+	transition: outline-color 0.25s ease;
+}
+
+article {
+	background: var(--surface2);
+	box-shadow: 0 2px 5px hsl(0 0% 0% / 20%);
+}

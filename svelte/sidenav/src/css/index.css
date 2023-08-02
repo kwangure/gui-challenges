@@ -1,0 +1,78 @@
+:root {
+	--surface: lch(10 0 0);
+	--surface2: lch(20 0 0);
+	--text: lch(90 0 0);
+	--text2: lch(70 0 0);
+	--brandHSL: 328 100% 54%;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--surface: lch(90 0 0);
+		--surface2: lch(100 0 0);
+		--text: lch(20 0 0);
+		--text2: lch(40 0 0);
+	}
+}
+
+@font-face {
+	font-family: 'BLOKK';
+	src: url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.eot');
+	src:
+		url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.eot?#iefix')
+			format('embedded-opentype'),
+		url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.woff2')
+			format('woff2'),
+		url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.woff')
+			format('woff'),
+		url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.otf')
+			format('opentype'),
+		url('https://storage.googleapis.com/atoms-sandbox.google.com.a.appspot.com/blokk/BLOKKNeue-Regular.ttf')
+			format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	min-block-size: 100vh;
+	font-family: 'BLOKK', system-ui;
+	margin: 0;
+	padding: 0;
+	background: var(--surface);
+	color: var(--text);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+figure {
+	margin: 0;
+	color: var(--text);
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	max-inline-size: 30ch;
+}
+
+p {
+	line-height: 1.5;
+	color: var(--text2);
+	max-inline-size: 50ch;
+}
+
+a {
+	color: hsl(328 100% 74%);
+	outline-color: hsl(var(--brandHSL));
+	outline-offset: 5px;
+}
+
+a:hover {
+	color: hsl(var(--brandHSL));
+}

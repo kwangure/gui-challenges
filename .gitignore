@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+.wireit
+.env
+.env.*
+!.env.example
+.eslintcache
+dist
+*.tsbuildinfo
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
