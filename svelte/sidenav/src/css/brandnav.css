@@ -14,39 +14,35 @@ nav {
 	}
 }
 
-.hamburger {
+.menu-button {
+	outline-offset: -1px;
+	outline: 1px solid transparent;
 	border: 2px solid transparent;
 	transition:
 		border-color 0.25s ease,
 		background-color 0.25s ease;
 }
 
-.hamburger:hover {
+.menu-button:hover {
 	color: hsl(var(--brandHSL));
 	border-color: hsl(var(--brandHSL) / 50%);
 }
 
-.hamburger:focus {
+.menu-button:focus {
 	border-color: hsl(var(--brandHSL) / 12%);
 	background: hsl(var(--brandHSL) / 10%);
+	outline-color: hsl(var(--brandHSL));
+	transition: outline-color 0.25s ease;
 }
 
-.hamburger:active {
+.menu-button:active {
 	background: hsl(var(--brandHSL) / 20%);
 }
-.hamburger > svg > line {
+
+.menu-button > svg > line {
 	stroke: currentColor;
 	stroke-width: 7px;
 	transition: stroke 0.25s ease;
-}
-
-aside > button {
-	outline-offset: -1px;
-	outline: 1px solid transparent;
-}
-aside > button:focus {
-	outline-color: hsl(var(--brandHSL));
-	transition: outline-color 0.25s ease;
 }
 
 article {
